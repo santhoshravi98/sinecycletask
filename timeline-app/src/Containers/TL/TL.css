@@ -1,0 +1,150 @@
+/* .main {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+} */
+.heading
+{
+    font-family: cursive;
+}
+.sectionBox
+{
+    background-color:white;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 16px;
+    border: 1px solid grey;
+    transition: all .2s;
+}
+.list-timeline
+{
+    box-sizing: border-box;
+    color: black;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-timeline-item
+{
+    position: relative;
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 14px;
+    list-style: none;
+}
+.list-timeline.list-timeline-label .list-timeline-item-label
+{
+    position: absolute;
+    top: -7px;
+    width: calc(50% - 12px);
+    text-align: right;
+}
+.list-timeline.list-timeline-alternate .list-timeline-item-head, .list-timeline.list-timeline-alternate .list-timeline-item-head-custom, .list-timeline.list-timeline-alternate .list-timeline-item-tail, .list-timeline.list-timeline-label .list-timeline-item-head, .list-timeline.list-timeline-label .list-timeline-item-head-custom, .list-timeline.list-timeline-label .list-timeline-item-tail, .list-timeline.list-timeline-right .list-timeline-item-head, .list-timeline.list-timeline-right .list-timeline-item-head-custom, .list-timeline.list-timeline-right .list-timeline-item-tail
+{
+    left: 50%;
+}
+.list-timeline.list-timeline-alternate .list-timeline-item-head, .list-timeline.list-timeline-label .list-timeline-item-head, .list-timeline.list-timeline-right .list-timeline-item-head
+{
+    margin-left: -4px;
+}
+.list-timeline-item-tail
+{
+    position: absolute;
+    top: 10px;
+    height: calc(100% - 10px);
+    border-left: 2px solid grey;
+}
+.list-timeline-item-head-blue{
+    color: blue;
+    border-color: blue;
+}
+.list-timeline-item-head{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border:2px solid blue;
+    border-radius: 100px;
+}
+.list-timeline.list-timeline-alternate .list-timeline-item-left .list-timeline-item-content, .list-timeline.list-timeline-label .list-timeline-item-left .list-timeline-item-content, .list-timeline.list-timeline-right .list-timeline-item-left .list-timeline-item-content
+{
+    left:calc(50% - 4px);
+    width:calc(50% - 14px);
+    text-align: left;
+}
+.list-timeline-item-content
+{
+    position: relative;
+    top:-7px;
+    margin: 0 0 0 26px;
+    word-break: break-word;
+}
+.code-box, .code-box .code-box-demo
+{
+    background-color: white;
+}
+.code-box
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 16px;
+    border-top: 1px solid grey;
+    border-radius: 2px;
+}
+.code-box-demo{
+    padding:42px 24px 50px;
+    color: black;
+}
+.list-timeline.list-timeline-label .list-timeline-item-right .list-timeline-item-label{
+    left: calc(50% + 14px);
+    width: calc(50% - 14px);
+    text-align: left;
+}
+.list-timeline.list-timeline-alternate .list-timeline-item-right .list-timeline-item-content, .list-timeline.list-timeline-label .list-timeline-item-right .list-timeline-item-content, .list-timeline.list-timeline-right .list-timeline-item-right .list-timeline-item-content
+{
+    width: calc(50% - 12px);
+    margin: 0;
+    text-align: right;
+}
+/* .list-timeline-item-alternate:nth-child(odd)
+{
+    left:calc(50% - 4px);
+    width:calc(50% - 14px);
+    text-align: left;
+} */
+#alternate:nth-child(even) .list-timeline-item-label
+{
+    left: calc(50% + 14px);
+    width: calc(50% - 14px);
+    text-align: left;
+}
+
+#alternate:nth-child(even) .list-timeline-item-content
+{
+    width: calc(50% - 12px);
+    margin: 0;
+    text-align: right;
+}
+
+#alternate:nth-child(odd) .list-timeline-item-label
+{
+    position: absolute;
+    width: calc(50% - 12px);
+   top: -7px;
+    text-align: right;
+}
+
+#alternate:nth-child(odd) .list-timeline-item-content
+{
+    left: calc(50% + 14px);
+    width: calc(50% - 14px);
+    text-align: left;
+}

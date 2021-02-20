@@ -1,0 +1,11 @@
+.radio
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 10px;
+    list-style: none;
+    display: inline-block;
+    line-height: unset;
+}
