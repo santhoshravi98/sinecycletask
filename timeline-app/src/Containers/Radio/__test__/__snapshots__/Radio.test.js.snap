@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <span>
+    <h2>
+      Change the Mode of the Timeline :
+    </h2>
+  </span>,
+  <div
+    className="grid"
+    data-testid="radio_test"
+    onChange={[Function]}
+  >
+    <label
+      className="card"
+    >
+      <input
+        className="radio"
+        defaultChecked={true}
+        name="plan"
+        type="radio"
+        value="left"
+      />
+      <span
+        className="plandetails"
+      >
+        <span
+          className="plantype"
+        >
+          Left
+        </span>
+        <span>
+          <br />
+        </span>
+        <span>
+          Left Align the Label
+        </span>
+      </span>
+    </label>
+    <label
+      className="card"
+    >
+      <input
+        className="radio"
+        name="plan"
+        type="radio"
+        value="right"
+      />
+      <span
+        className="hiddenvisually"
+      />
+      <span
+        aria-hidden="true"
+        className="plandetails"
+      >
+        <span
+          className="plantype"
+        >
+          Right
+        </span>
+        <span>
+          <br />
+        </span>
+        <span>
+          Right Align the Label
+        </span>
+      </span>
+    </label>
+    <label
+      className="card"
+    >
+      <input
+        className="radio"
+        name="plan"
+        type="radio"
+        value="alternate"
+      />
+      <span
+        className="hiddenvisually"
+      />
+      <span
+        aria-hidden="true"
+        className="plandetails"
+      >
+        <span
+          className="plantype"
+        >
+          Alternate
+        </span>
+        <span>
+          <br />
+        </span>
+        <span>
+          Alternate the Label and contents
+        </span>
+      </span>
+    </label>
+  </div>,
+]
+`;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
-import '../TimeLine/TimeLine.css'
 
-
+// A Componene for holding the Parent Unordered List
 class TimeLine extends Component {
     render() {
         return (
@@ -14,7 +13,5 @@ class TimeLine extends Component {
         )
     }
 }
-
-
 
 export default TimeLine;

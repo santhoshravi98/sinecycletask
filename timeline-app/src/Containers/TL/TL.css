@@ -1,13 +1,9 @@
-/* .main {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    z-index: 15;
-    top: 50%;
-    left: 50%;
-    margin: -150px 0 0 -150px;
-} */
 .heading
+{
+    font-family: cursive;
+    font-style: italic;
+}
+.dropdownHeading
 {
     font-family: cursive;
 }
@@ -42,7 +38,7 @@
 .list-timeline.list-timeline-label .list-timeline-item-label
 {
     position: absolute;
-    top: -7px;
+    top: -3px;
     width: calc(50% - 12px);
     text-align: right;
 }
@@ -52,7 +48,7 @@
 }
 .list-timeline.list-timeline-alternate .list-timeline-item-head, .list-timeline.list-timeline-label .list-timeline-item-head, .list-timeline.list-timeline-right .list-timeline-item-head
 {
-    margin-left: -4px;
+    margin-left: -5.5px;
 }
 .list-timeline-item-tail
 {
@@ -82,7 +78,7 @@
 .list-timeline-item-content
 {
     position: relative;
-    top:-7px;
+    top:-3px;
     margin: 0 0 0 26px;
     word-break: break-word;
 }
@@ -102,6 +98,13 @@
 .code-box-demo{
     padding:42px 24px 50px;
     color: black;
+    border:1px solid #999999;
+    color:#6f6f6f;
+    font-size:10px;
+    width:100%;
+    position: relative;
+    display: inline-block;
+    height: auto;
 }
 .list-timeline.list-timeline-label .list-timeline-item-right .list-timeline-item-label{
     left: calc(50% + 14px);
@@ -120,31 +123,47 @@
     width:calc(50% - 14px);
     text-align: left;
 } */
-#alternate:nth-child(even) .list-timeline-item-label
+.list-timeline-item.list-timeline-item-alternate:nth-child(even) .list-timeline-item-label
 {
     left: calc(50% + 14px);
     width: calc(50% - 14px);
     text-align: left;
 }
 
-#alternate:nth-child(even) .list-timeline-item-content
+.list-timeline-item.list-timeline-item-alternate:nth-child(even) .list-timeline-item-content
 {
     width: calc(50% - 12px);
     margin: 0;
     text-align: right;
 }
 
-#alternate:nth-child(odd) .list-timeline-item-label
+.list-timeline-item.list-timeline-item-alternate:nth-child(odd) .list-timeline-item-label
 {
     position: absolute;
     width: calc(50% - 12px);
-   top: -7px;
+   top: -3px;
     text-align: right;
 }
 
-#alternate:nth-child(odd) .list-timeline-item-content
+.list-timeline-item.list-timeline-item-alternate:nth-child(odd) .list-timeline-item-content
 {
     left: calc(50% + 14px);
     width: calc(50% - 14px);
     text-align: left;
+}
+
+.list-timeline-item:last-child .list-timeline-item-tail
+{
+    display: none;
+}
+
+.sketch
+{
+    margin-left: 40%;
+    border-radius: 10px !important;
+}
+@media (max-width: 600px) {
+    .sketch{
+        margin-left: 30%;
+    }
 }

@@ -7,6 +7,11 @@ import App from './App';
 import thunk from "redux-thunk";
 import reportWebVitals from './reportWebVitals';
 import DisplayModeReducer from '../src/Store/Reducers/DisplayModeReducer'
+
+/* To combine all the reducers to one, in case if multiple exists.
+ In our case we only have one Reducer
+*/
+
 const rootReducer = combineReducers({
   DisplayModeReducer: DisplayModeReducer
 });

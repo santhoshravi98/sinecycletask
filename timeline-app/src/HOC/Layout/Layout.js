@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Aux from "../Auxillary/Auxillary";
-import cssClasses from "./Layout.module.css";
-//Check Comment
+
+//A Layout Structure which can also allow Header and Footer to be added
+
 class Layout extends Component {
   state = {
     showSideDrawer: false,
@@ -9,11 +10,10 @@ class Layout extends Component {
   render() {
     return (
       <Aux>
-        <main className={cssClasses.Content}>{this.props.children}</main>
+        <main>{this.props.children}</main>
       </Aux>
     );
   }
 }
-
 
 export default Layout;
