@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import css from '../Radio/Radio.module.css'
+import css from './Radio.module.css'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
 
 // Css Modules are used in this component for the purpose of Local Scope

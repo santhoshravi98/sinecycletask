@@ -48,7 +48,7 @@
 }
 .list-timeline.list-timeline-alternate .list-timeline-item-head, .list-timeline.list-timeline-label .list-timeline-item-head, .list-timeline.list-timeline-right .list-timeline-item-head
 {
-    margin-left: -5.5px;
+    margin-left: -6.0px;
 }
 .list-timeline-item-tail
 {
@@ -162,8 +162,34 @@
     margin-left: 40%;
     border-radius: 10px !important;
 }
+
+.reverse {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.reverse > li {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.reverse .list-timeline-item:last-child .list-timeline-item-tail
+{
+    display: block;
+}
+.reverse .list-timeline-item:first-child .list-timeline-item-tail
+{
+    display: none;
+}
+
 @media (max-width: 600px) {
     .sketch{
         margin-left: 30%;
     }
+}
+#spinnerCircular{
+    border: none;
+    height: 15px;
+    width: 13px !important;
+   
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radio from '../Radio/Radio'
+import Radio from '../../Components/Radio/Radio'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
 import '../TL/TL.css'
 import TimeLine from '../TimeLine/TimeLine'
@@ -7,6 +7,7 @@ import TimeLineItem from '../TimeLineITem/TimeLineItem'
 import * as DisplayModeActionCreator from '../../Store/Actions/DisplayModeActionCreator'
 import { connect } from 'react-redux'
 import { SketchPicker } from 'react-color';
+import Button from '../../Components/Button/Button'
 
 /* 
 
@@ -24,10 +25,18 @@ class TL extends Component {
 
     // Radio Change Handler Helper Method
     onRadioChangeHandler = (event, id) => {
-        let postData = {
-            mode: event.target.value
-        }
-        this.props.postMode(postData);
+      
+        
+            let postData = {
+                mode: event.target.value
+            }
+            this.props.postMode(postData);
+        
+    }
+
+    reverseTogglerHanlder = () => {
+        let reverse = !this.props.reverse;
+        this.props.addReverseToggler(reverse);
     }
 
     // Color Change Handler Helper Method
@@ -44,6 +53,10 @@ class TL extends Component {
                 <div className='main'>
                     <h1 className='heading'>Custom TimeLine</h1>
                     <Radio radioChange={this.onRadioChangeHandler} checked={this.props.mode} />
+                    <br/>
+                    <Button buttonClickMethod={this.reverseTogglerHanlder} buttonType="Success">
+                        Toggle Reverse
+                    </Button>
                     <span className="dropdownHeading"><h2>Change the Color of the Timeline Nodes :</h2></span>
                     <SketchPicker
                         className="sketch"
@@ -56,20 +69,20 @@ class TL extends Component {
                         <section className="code-box-demo">
 
                             <TimeLine data-testid="timeline">
-                                <TimeLineItem label="2015-09-01">
+                                <TimeLineItem label="2015-09-01" pending="sreeja">
                                     Sample Text 1
                         </TimeLineItem>
                                 <TimeLineItem label="2015-09-22">
-                                Sample Text 2
+                                    Sample Text 2
                         </TimeLineItem>
                                 <TimeLineItem label="2015-05-13">
-                                Sample Text 3
+                                    Sample Text 3
                         </TimeLineItem>
-                                <TimeLineItem label="2015-09-17">
-                                Sample Text 4
+                                <TimeLineItem label="2015-09-17" dot="pending">
+                                    Sample Text 4
                         </TimeLineItem>
-                                <TimeLineItem label="2015-09-18">
-                                Sample Text 5
+                                <TimeLineItem label="2015-09-18" pending={"santhosh"}>
+                                    Sample Text 5
                         </TimeLineItem>
                             </TimeLine>
                         </section>
@@ -83,7 +96,8 @@ class TL extends Component {
 // States from Redux Store
 const mapStateToProps = (state) => {
     return {
-        userSelectedMode: state.DisplayModeReducer.userSelectedMode
+        userSelectedMode: state.DisplayModeReducer.userSelectedMode,
+        reverse : state.DisplayModeReducer.reverse
     }
 }
 
@@ -95,6 +109,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         postColor: (data) => {
             dispatch(DisplayModeActionCreator.postColor(data));
+        },
+        addReverseToggler: (data) => {
+            dispatch(DisplayModeActionCreator.addReverseToggler(data));
         }
     }
 }

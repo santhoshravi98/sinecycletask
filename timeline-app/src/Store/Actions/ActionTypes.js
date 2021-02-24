@@ -8,3 +8,6 @@ export const ADD_MODE_SUCCESS = "ADD_MODE_SUCCESS";
 
 export const ADD_COLOR = "ADD_COLOR";
 export const ADD_COLOR_SUCCESS = "ADD_COLOR_SUCCESS";
+
+export const ADD_REVERSE = "ADD_REVERSE";
+export const ADD_REVERSE_SUCCESS = "ADD_REVERSE_SUCCESS";

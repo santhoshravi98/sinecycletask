@@ -6,7 +6,8 @@ Reducer for the Global Store
 
 let initialState = {
     userSelectedMode: 'left',
-    selectedColor: 'blue'
+    selectedColor: 'blue',
+    reverse: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -25,6 +26,15 @@ const reducer = (state = initialState, action) => {
                 return {
                     ...state,
                     selectedColor: action.value.selectedColor
+                }
+            }
+
+        // Distribute the existing State, add new User Selected Color to the store
+        case ActionTypes.ADD_REVERSE_SUCCESS:
+            {
+                return {
+                    ...state,
+                    reverse: action.value
                 }
             }
 

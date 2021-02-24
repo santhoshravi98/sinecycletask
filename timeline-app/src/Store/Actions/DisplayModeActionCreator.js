@@ -31,3 +31,17 @@ export const postColor = (data) => {
         dispatch(postColorSuccess(data));
     }
 }
+
+export const addReverseTogglerSuccess = (data) => {
+    return {
+        type: ActionTypes.ADD_REVERSE_SUCCESS,
+        value: data
+    }
+}
+
+// Add User Selected Color to the Store
+export const addReverseToggler = (data) => {
+    return (dispatch) => {
+        dispatch(addReverseTogglerSuccess(data));
+    }
+}

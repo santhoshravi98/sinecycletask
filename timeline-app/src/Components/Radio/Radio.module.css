@@ -95,6 +95,7 @@ body {
     border-radius: var(--card-radius);
     cursor: pointer;
     display: flex;
+    font-size: 10px;
     flex-direction: column;
     padding: var(--card-padding);
     transition: border-color 0.2s ease-out;
