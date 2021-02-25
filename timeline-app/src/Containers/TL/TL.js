@@ -25,13 +25,13 @@ class TL extends Component {
 
     // Radio Change Handler Helper Method
     onRadioChangeHandler = (event, id) => {
-      
-        
-            let postData = {
-                mode: event.target.value
-            }
-            this.props.postMode(postData);
-        
+
+
+        let postData = {
+            mode: event.target.value
+        }
+        this.props.postMode(postData);
+
     }
 
     reverseTogglerHanlder = () => {
@@ -53,7 +53,7 @@ class TL extends Component {
                 <div className='main'>
                     <h1 className='heading'>Custom TimeLine</h1>
                     <Radio radioChange={this.onRadioChangeHandler} checked={this.props.mode} />
-                    <br/>
+                    <br />
                     <Button buttonClickMethod={this.reverseTogglerHanlder} buttonType="Success">
                         Toggle Reverse
                     </Button>
@@ -69,20 +69,47 @@ class TL extends Component {
                         <section className="code-box-demo">
 
                             <TimeLine data-testid="timeline">
-                                <TimeLineItem label="2015-09-01" pending="sreeja">
+                                <TimeLineItem label="2015-09-01">
                                     Sample Text 1
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-09-22">
-                                    Sample Text 2
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-05-13">
-                                    Sample Text 3
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-09-17" dot="pending">
-                                    Sample Text 4
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-09-18" pending={"santhosh"}>
+                                </TimeLineItem>
+                                <TimeLineItem label="2015-09-22" color="green" dot="pending">
                                     Sample Text 5
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-09-22" color="green">
+                                    Sample Text 5
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-09-22" color="green">
+                                    Sample Text 5
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-05-13" pending={"Sample Loading Indicator 2"}>
+                                    Sample Text 6
+                        </TimeLineItem>
+
+                                <TimeLineItem label="2015-05-13">
+                                    Sample Text 6
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-05-13" color="red">
+                                    Sample Text 6
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-09-17" dot="pending" color="orange">
+                                    Sample Text 7
+                                    <p>Sample Text 4</p>
+                                    <p>Sample Text 4</p>
+                                    <p>Sample Text 4</p>
+                                </TimeLineItem>
+                                <TimeLineItem>
+                                    Sample Text 8
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-09-18" pending={"Sample Loading Indicator"} color="orange">
+                                </TimeLineItem>
+                                <TimeLineItem label="2015-05-13">
+                                    Sample Text 6
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-05-13" dot="pending" >
+                                    Sample Text 6
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-05-13" pending={"Sample Loading Indicator 2"}>
+                                    Sample Text 6
                         </TimeLineItem>
                             </TimeLine>
                         </section>
@@ -97,7 +124,7 @@ class TL extends Component {
 const mapStateToProps = (state) => {
     return {
         userSelectedMode: state.DisplayModeReducer.userSelectedMode,
-        reverse : state.DisplayModeReducer.reverse
+        reverse: state.DisplayModeReducer.reverse
     }
 }
 

@@ -12,19 +12,25 @@ class TimeLineItem extends Component {
         let mode = this.props.userSelectedMode;
         let dynamicSpinnerDiv = '';
         let content = '';
+        let nodeColor = '';
+        if (this.props.color && this.props.color.length > 0)
+            nodeColor = this.props.color;
+        else
+            nodeColor = this.props.selectedColor;
+
         if (this.props.pending && this.props.pending.length > 0) {
             content = this.props.pending;
-            dynamicSpinnerDiv = (<SpinnerCircular id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" size={400} thickness={300} speed={99} color="blue" secondaryColor="rgba(172, 57, 59, 0)" />)
+            dynamicSpinnerDiv = (<SpinnerCircular id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" size={400} thickness={300} speed={99} color={nodeColor} secondaryColor="rgba(172, 57, 59, 0)" />)
         }
-        else if(this.props.dot && this.props.dot.length > 0) {
+        else if (this.props.dot && this.props.dot.length > 0) {
             content = this.props.children;
             dynamicSpinnerDiv = (
-                <FontAwesomeIcon icon={faClock}  id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue"/>
-                );
+                <FontAwesomeIcon icon={faClock} id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" style={{ color: nodeColor }} />
+            );
         }
         else {
             content = this.props.children;
-            dynamicSpinnerDiv = (<div className="list-timeline-item-head list-timeline-item-head-blue clock outline"  style={{ borderColor: this.props.selectedColor }}>
+            dynamicSpinnerDiv = (<div className="list-timeline-item-head list-timeline-item-head-blue clock outline" style={{ borderColor: nodeColor }}>
             </div>);
         }
 

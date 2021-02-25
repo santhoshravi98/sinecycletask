@@ -6,7 +6,7 @@ Reducer for the Global Store
 
 let initialState = {
     userSelectedMode: 'left',
-    selectedColor: 'blue',
+    selectedColor: '#1890ff',
     reverse: false
 }
 

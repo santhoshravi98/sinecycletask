@@ -58,15 +58,15 @@
     border-left: 2px solid grey;
 }
 .list-timeline-item-head-blue{
-    color: blue;
-    border-color: blue;
+    color: #1890ff;
+    border-color: #1890ff;
 }
 .list-timeline-item-head{
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: white;
-    border:2px solid blue;
+    border:2px solid #1890ff;
     border-radius: 100px;
 }
 .list-timeline.list-timeline-alternate .list-timeline-item-left .list-timeline-item-content, .list-timeline.list-timeline-label .list-timeline-item-left .list-timeline-item-content, .list-timeline.list-timeline-right .list-timeline-item-left .list-timeline-item-content
