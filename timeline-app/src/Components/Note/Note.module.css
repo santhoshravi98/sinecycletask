@@ -1,0 +1,131 @@
+.notecard {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    box-shadow: 4px 11px 16px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 6.6%;
+    background: #fff;
+    line-height: 1.4;
+    font-family: sans-serif;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.notecard a {
+    color: inherit;
+}
+
+.notecard a:hover {
+    color: #5ad67d;
+}
+
+.notecard:hover .photoe {
+    transform: scale(1.3) rotate(3deg);
+}
+
+.notecard .description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.notecard .description h1,
+.notecard .description h2 {
+    font-family: Poppins, sans-serif;
+}
+
+.notecard .description h1 {
+    line-height: 1;
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.notecard .description h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-top: 5px;
+}
+
+.notecard .description .read-more {
+    text-align: right;
+}
+
+.notecard .description .read-more a {
+    color: #5ad67d;
+    display: inline-block;
+    position: relative;
+}
+
+.notecard .description .read-more a:after {
+    content: "\f061";
+    font-family: FontAwesome;
+    margin-left: -10px;
+    opacity: 0;
+    vertical-align: middle;
+    transition: margin 0.3s, opacity 0.3s;
+}
+
+.notecard .description .read-more a:hover:after {
+    margin-left: 5px;
+    opacity: 1;
+}
+
+.notecard p {
+    position: relative;
+    margin: 1rem 0 0;
+}
+
+.notecard p:first-of-type {
+    margin-top: 1.25rem;
+}
+
+.notecard p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background: #5ad67d;
+    width: 35px;
+    top: -0.75rem;
+    border-radius: 3px;
+}
+
+.notecard:hover .details {
+    left: 0%;
+}
+
+@media (min-width: 640px) {
+    .notecard {
+        flex-direction: row;
+        max-width: 450px;
+    }
+
+    .notecard .description:before {
+        transform: skewX(-3deg);
+        content: "";
+        background: #fff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .notecard.alt {
+        flex-direction: row-reverse;
+    }
+
+    .notecard.alt .description:before {
+        left: inherit;
+        right: -10px;
+        transform: skew(3deg);
+    }
+
+    .notecard.alt .details {
+        padding-left: 25px;
+    }
+}

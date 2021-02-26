@@ -3,7 +3,9 @@
 exports[`matches snapshot 1`] = `
 Array [
   <span>
-    <h2>
+    <h2
+      className="radioHeadline"
+    >
       Change the Mode of the Timeline :
     </h2>
   </span>,

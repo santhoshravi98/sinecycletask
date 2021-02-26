@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="notecard"
+  data-testid="note_test"
+>
+  <div
+    className="description"
+  >
+    <h2>
+      Note
+    </h2>
+    <p>
+       The Colors for Timeline Nodes (normal, pending, loading) are provided via the TimeLine property. For those not provided can be adjusted using color picker.
+    </p>
+  </div>
+</div>
+`;

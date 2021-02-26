@@ -159,7 +159,7 @@
 
 .sketch
 {
-    margin-left: 40%;
+    margin-left: 15%;
     border-radius: 10px !important;
 }
 
@@ -184,7 +184,7 @@
 
 @media (max-width: 600px) {
     .sketch{
-        margin-left: 30%;
+        margin-left: 20%;
     }
 }
 #spinnerCircular{
@@ -192,4 +192,12 @@
     height: 15px;
     width: 13px !important;
    
+}
+.color{
+    display: flex;
+}
+@media (max-width: 950px) {
+    .color{
+        display: block;
+    }
 }

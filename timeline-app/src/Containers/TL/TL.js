@@ -8,16 +8,19 @@ import * as DisplayModeActionCreator from '../../Store/Actions/DisplayModeAction
 import { connect } from 'react-redux'
 import { SketchPicker } from 'react-color';
 import Button from '../../Components/Button/Button'
+import Note from '../../Components/Note/Note'
 
 /* 
 
-Parent Core Component Responsible for Event Handlers
-Redux is used for Global Store
-Values maintained in Redux include : User Selected Color, User Selected Mode
-Sketch Picker Library is used for the purpose of color selection
-Unit Tests are written using React Testing Libary and Jest
-Css Modules are used in Radio Component for Local Scoping of CSS Classes
-TL component is connected to access both the Global store state and dispatch functions
+Parent Core Component Responsible for Event Handlers.
+Redux is used for Global Store.
+Values maintained in Redux include : User Selected Color, User Selected Mode.
+Sketch Picker Library is used for the purpose of color selection.
+Unit Tests are written using React Testing Libary and Jest.
+Css Modules are used in Radio Component for Local Scoping of CSS Classes.
+TL component is connected to access both the Global store state and dispatch functions.
+Font Awesome Icons are used for leveraging Icons.
+React Spinner Component is used for implementing loading components.
 
 */
 
@@ -52,19 +55,23 @@ class TL extends Component {
             <Auxillary>
                 <div className='main'>
                     <h1 className='heading'>Custom TimeLine</h1>
+                    <span className="dropdownHeading"><h2>Change the Color of the Timeline Nodes :</h2></span>
+                    <span className="color">
+                        <SketchPicker
+                            className="sketch"
+                            color="white"
+                            onChangeComplete={this.handleChangeComplete}
+                        />
+                        <Note />
+                    </span>
+                    <br />
+                    <br />
                     <Radio radioChange={this.onRadioChangeHandler} checked={this.props.mode} />
                     <br />
                     <Button buttonClickMethod={this.reverseTogglerHanlder} buttonType="Success">
                         Toggle Reverse
                     </Button>
-                    <span className="dropdownHeading"><h2>Change the Color of the Timeline Nodes :</h2></span>
-                    <SketchPicker
-                        className="sketch"
-                        color="white"
-                        onChangeComplete={this.handleChangeComplete}
-                    />
-                    <br />
-                    <br />
+                    
                     <section className="code-box">
                         <section className="code-box-demo">
 
