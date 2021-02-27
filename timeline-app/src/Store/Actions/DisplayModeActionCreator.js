@@ -39,7 +39,7 @@ export const addReverseTogglerSuccess = (data) => {
     }
 }
 
-// Add User Selected Color to the Store
+// Add Reverse Bool to the Store
 export const addReverseToggler = (data) => {
     return (dispatch) => {
         dispatch(addReverseTogglerSuccess(data));

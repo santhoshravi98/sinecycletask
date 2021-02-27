@@ -14,7 +14,7 @@ import Note from '../../Components/Note/Note'
 
 Parent Core Component Responsible for Event Handlers.
 Redux is used for Global Store.
-Values maintained in Redux include : User Selected Color, User Selected Mode.
+Values maintained in Redux include : User Selected Color, User Selected Mode, Toggle Reverse 
 Sketch Picker Library is used for the purpose of color selection.
 Unit Tests are written using React Testing Libary and Jest.
 Css Modules are used in Radio Component for Local Scoping of CSS Classes.
@@ -36,7 +36,7 @@ class TL extends Component {
         this.props.postMode(postData);
 
     }
-
+    // Btn Click Handler for Reverse Toggler
     reverseTogglerHanlder = () => {
         let reverse = !this.props.reverse;
         this.props.addReverseToggler(reverse);
@@ -71,52 +71,48 @@ class TL extends Component {
                     <Button buttonClickMethod={this.reverseTogglerHanlder} buttonType="Success">
                         Toggle Reverse
                     </Button>
-                    
                     <section className="code-box">
                         <section className="code-box-demo">
-
                             <TimeLine data-testid="timeline">
-                                <TimeLineItem label="2015-09-01">
+                                <TimeLineItem label="2015-01-01">
                                     Sample Text 1
                                 </TimeLineItem>
-                                <TimeLineItem label="2015-09-22" color="green" dot="pending">
+                                <TimeLineItem label="2015-01-02" color="green" dot="pending">
+                                    Sample Text 2
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-01-03" color="green">
+                                    Sample Text 3
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-01-04" color="green">
+                                    Sample Text 4
+                        </TimeLineItem>
+                                <TimeLineItem label="2015-01-05" pending={"Sample Loading Indicator 1"}>
+                                </TimeLineItem>
+                                <TimeLineItem label="2015-01-06">
                                     Sample Text 5
                         </TimeLineItem>
-                                <TimeLineItem label="2015-09-22" color="green">
-                                    Sample Text 5
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-09-22" color="green">
-                                    Sample Text 5
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-05-13" pending={"Sample Loading Indicator 2"}>
+                                <TimeLineItem label="2015-01-07" color="red">
                                     Sample Text 6
                         </TimeLineItem>
-
-                                <TimeLineItem label="2015-05-13">
-                                    Sample Text 6
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-05-13" color="red">
-                                    Sample Text 6
-                        </TimeLineItem>
-                                <TimeLineItem label="2015-09-17" dot="pending" color="orange">
+                                <TimeLineItem label="2015-01-08" dot="pending" color="orange">
                                     Sample Text 7
-                                    <p>Sample Text 4</p>
-                                    <p>Sample Text 4</p>
-                                    <p>Sample Text 4</p>
+                                    <p>Sample Text 8</p>
+                                    <p>Sample Text 9</p>
+                                    <p>Sample Text 10</p>
                                 </TimeLineItem>
                                 <TimeLineItem>
-                                    Sample Text 8
+                                    Sample Text 11
                         </TimeLineItem>
-                                <TimeLineItem label="2015-09-18" pending={"Sample Loading Indicator"} color="orange">
+                                <TimeLineItem label="2015-01-09" pending={"Sample Loading Indicator 2"} color="orange">
                                 </TimeLineItem>
-                                <TimeLineItem label="2015-05-13">
-                                    Sample Text 6
+                                <TimeLineItem label="2015-01-10">
+                                    Sample Text 12
                         </TimeLineItem>
-                                <TimeLineItem label="2015-05-13" dot="pending" >
-                                    Sample Text 6
+                                <TimeLineItem label="2015-01-11" dot="pending" >
+                                    Sample Text 13
                         </TimeLineItem>
-                                <TimeLineItem label="2015-05-13" pending={"Sample Loading Indicator 2"}>
-                                    Sample Text 6
+                                <TimeLineItem label="2015-01-12" pending={"Sample Loading Indicator 3"}>
+                                    Sample Text 14
                         </TimeLineItem>
                             </TimeLine>
                         </section>

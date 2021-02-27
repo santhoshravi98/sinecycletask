@@ -1,5 +1,9 @@
 import React from "react";
 import css from "../Note/Note.module.css";
+
+// A Note Card 
+// Css Modules are used in this component for the purpose of Local Scope
+
 const Note = (props) => {
     return (
         <div className={css.notecard} data-testid="note_test">

@@ -4,6 +4,7 @@ import * as ActionTypes from "../Actions/ActionTypes";
 Reducer for the Global Store
 */
 
+// Default Values of the Reducer
 let initialState = {
     userSelectedMode: 'left',
     selectedColor: '#1890ff',
@@ -29,7 +30,7 @@ const reducer = (state = initialState, action) => {
                 }
             }
 
-        // Distribute the existing State, add new User Selected Color to the store
+        // Distribute the existing State, add new Reverse Bool to the store
         case ActionTypes.ADD_REVERSE_SUCCESS:
             {
                 return {

@@ -10,27 +10,31 @@ import { faClock } from '@fortawesome/free-regular-svg-icons'
 class TimeLineItem extends Component {
     render() {
         let mode = this.props.userSelectedMode;
-        let dynamicSpinnerDiv = '';
+        let dynamicNodeDiv = '';
         let content = '';
         let nodeColor = '';
+
+        // To use the color if provided from the props, else choosing from the color picker
         if (this.props.color && this.props.color.length > 0)
             nodeColor = this.props.color;
         else
             nodeColor = this.props.selectedColor;
 
+        // To use the loading ind. and color for the loading indicator from the props, else choosing from the color picker
         if (this.props.pending && this.props.pending.length > 0) {
             content = this.props.pending;
-            dynamicSpinnerDiv = (<SpinnerCircular id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" size={400} thickness={300} speed={99} color={nodeColor} secondaryColor="rgba(172, 57, 59, 0)" />)
+            dynamicNodeDiv = (<SpinnerCircular id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" size={400} thickness={300} speed={99} color={nodeColor} secondaryColor="rgba(172, 57, 59, 0)" />)
         }
+        // To use the pending icon and color for the pending icon from props, else choosing from the color picker
         else if (this.props.dot && this.props.dot.length > 0) {
             content = this.props.children;
-            dynamicSpinnerDiv = (
+            dynamicNodeDiv = (
                 <FontAwesomeIcon icon={faClock} id="spinnerCircular" className="list-timeline-item-head list-timeline-item-head-blue" style={{ color: nodeColor }} />
             );
         }
         else {
             content = this.props.children;
-            dynamicSpinnerDiv = (<div className="list-timeline-item-head list-timeline-item-head-blue clock outline" style={{ borderColor: nodeColor }}>
+            dynamicNodeDiv = (<div className="list-timeline-item-head list-timeline-item-head-blue clock outline" style={{ borderColor: nodeColor }}>
             </div>);
         }
 
@@ -39,7 +43,7 @@ class TimeLineItem extends Component {
                 <li className={"list-timeline-item list-timeline-item-" + mode}>
                     <div className="list-timeline-item-label">{this.props.label}</div>
                     <div className="list-timeline-item-tail"></div>
-                    {dynamicSpinnerDiv}
+                    {dynamicNodeDiv}
                     <div className="list-timeline-item-content">{content}</div>
                 </li>
             </Auxillary>

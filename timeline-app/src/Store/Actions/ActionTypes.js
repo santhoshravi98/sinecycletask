@@ -2,6 +2,7 @@
 Set of all the Actions to be dispatched,
 1) For Adding User Selected Mode to the Redux Store
 2) For Adding User Selected Color to the Redux Store
+3) For Adding Reverse Bool to the Redux Store
 */
 export const ADD_MODE = "ADD_MODE";
 export const ADD_MODE_SUCCESS = "ADD_MODE_SUCCESS";
